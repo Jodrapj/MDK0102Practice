@@ -1,11 +1,11 @@
-package ru.netology.nmedia.viewmodel
+package nmedia.viewmodel
 
 import android.app.Application
 import androidx.lifecycle.*
 import nmedia.repository.PostRepositorySQLiteImpl
 import ru.netology.nmedia.db.AppDb
-import ru.netology.nmedia.dto.Post
-import ru.netology.nmedia.repository.*
+import nmedia.dto.Post
+import nmedia.repository.*
 
 private val empty = Post(
     id = 0,
@@ -19,7 +19,6 @@ private val empty = Post(
 )
 
 class PostViewModel(application: Application) : AndroidViewModel(application) {
-    // упрощённый вариант
     private val repository: PostRepository = PostRepositorySQLiteImpl(
         AppDb.getInstance(application).postDao
     )
@@ -28,7 +27,7 @@ class PostViewModel(application: Application) : AndroidViewModel(application) {
 
     fun save() {
         edited.value?.let {
-            repository.save(it)
+            //repository.save(it)
         }
         edited.value = empty
     }

@@ -1,6 +1,6 @@
-package ru.netology.nmedia.dao
+package nmedia.dao
 
-import ru.netology.nmedia.dto.Post
+import nmedia.dto.Post
 
 interface PostDao {
     fun getAll(): List<Post>
