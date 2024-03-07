@@ -2,7 +2,7 @@ package nmedia.repository
 
 import androidx.lifecycle.LiveData
 import androidx.lifecycle.MutableLiveData
-import ru.netology.nmedia.dao.PostDao
+import nmedia.dao.PostDao
 import nmedia.dto.Post
 import nmedia.repository.PostRepository
 
